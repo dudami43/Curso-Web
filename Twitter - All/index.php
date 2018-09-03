@@ -16,7 +16,20 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	
 		<script>
-			// código javascript						
+			$(document).ready(function()
+			{
+				$('#btn_login').click(function()
+				{
+					if($('#campo_usuario').val()== '')
+					{
+						alert ('Preencha o campo usuário');
+					}
+					if($('#campo_senha').val()== '')
+					{
+						alert ('Preencha o campo senha');
+					}
+				});
+			});
 		</script>
 	</head>
 
