@@ -13,6 +13,19 @@
     $objDb = new db();
     $link = $objDb->conecta_mysql();
 
-    $sql = "SELECT * FROM tweet ORDER BY data_inclusao DESC";
-    mysqli_query($link,$sql);
+    $sql = "SELECT * FROM tweet WHERE id_usuario = $id_usuario ORDER BY data_inclusao DESC";
+
+    $resultado_id = mysqli_query($link,$sql);
+
+    if($resultado_id)
+    {
+        while($registro = msqli_fetch_array($resultado_id, MYSQLI_ASSOC))
+        {
+
+        }
+    }
+    else
+    {
+        echo 'Erro';
+    }
 ?>

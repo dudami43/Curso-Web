@@ -43,8 +43,7 @@
 					$.ajax({
 						url: 'get_tweet.php',
 						success: function(data){
-							$('#tweets').html(data)
-							alert(data);
+							$('#tweets').html(data);
 						}
 					});
 				}
