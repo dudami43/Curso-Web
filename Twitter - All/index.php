@@ -20,14 +20,26 @@
 			{
 				$('#btn_login').click(function()
 				{
+					var campo_vazio = false;
 					if($('#campo_usuario').val()== '')
 					{
-						alert ('Preencha o campo usuário');
+						$('#campo_usuario').css({'border-color':'#A94442'});
+						campo_vazio = true;
+					}
+					else
+					{
+						$('#campo_usuario').css({'border-color':'#CCC'});
 					}
 					if($('#campo_senha').val()== '')
 					{
-						alert ('Preencha o campo senha');
+						$('#campo_senha').css({'border-color':'#A94442'});
+						campo_vazio = true;
 					}
+					else
+					{
+						$('#campo_senha').css({'border-color':'#CCC'});
+					}
+					if(campo_vazio) return false;
 				});
 			});
 		</script>
